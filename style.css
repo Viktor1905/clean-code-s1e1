@@ -18,8 +18,9 @@ body {
 }
 
 @media (max-width:768px) {
-.todo-header { text-align: center;
-}
+    .todo-header {
+        text-align: center;
+    }
 }
 .centered-main{
     display: block;
