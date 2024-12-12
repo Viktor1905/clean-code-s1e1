@@ -36,7 +36,7 @@ body {
 .task-row-wrapper {
     display: flex;
 }
-ul {
+.incomplete-tasks, .completed-tasks {
     margin:0;
     padding: 0px;
 }
@@ -98,7 +98,7 @@ label[for='new-task'] {
 }
 
 /* Task list */
-li {
+.completed-tasks__item, .incomplete-tasks__item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -138,11 +138,11 @@ input[type="checkbox"] {
     display:none;
 }
 
-.edit-mode .task-input {
+.incomplete-tasks__edit-mode .task-input {
     display:inline-block;
     width:224px
 }
 
-.edit-mode .task-label {
+.incomplete-tasks__edit-mode .task-label {
     display:none;
 }
