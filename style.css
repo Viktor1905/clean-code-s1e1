@@ -22,7 +22,7 @@ body {
         text-align: center;
     }
 }
-.centered-main{
+.centered-main {
     display: block;
     width: 500px;
     margin: 0 auto 0;
@@ -42,7 +42,7 @@ ul {
 li, h3 {
     list-style:none;
 }
-input,button{
+input,button {
     outline:none;
 }
 button {
