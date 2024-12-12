@@ -30,7 +30,7 @@ body {
 .task-label, .task-input {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 .task-row-wrapper {
     display: flex;
@@ -79,7 +79,7 @@ label[for='new-task'] {
     border-radius: 6px;
     font-family: Lato, sans-serif;
     color: #888;
-    width: 226px
+    width: 226px;
 }
 .task-input:focus {
     color: #333;
@@ -126,13 +126,13 @@ input[type="checkbox"] {
 
 /* Completed */
 #completed-tasks .task-label {
-    text-decoration: line-through
+    text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
 .task-input-unvisible {
-    display:none
+    display:none;
 }
 
 .edit-mode .task-input {
