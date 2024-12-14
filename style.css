@@ -134,15 +134,18 @@ input[type="checkbox"] {
 }
 
 /* Edit Task */
-.task-input-unvisible {
+.unvisible {
     display:none;
 }
 
-.incomplete-tasks__edit-mode .task-input {
+.edit-mode .task-input {
     display:inline-block;
     width:224px
 }
 
-.incomplete-tasks__edit-mode .task-label {
+.edit-mode .task-label {
+    display:none;
+}
+.task-input .unvisible {
     display:none;
 }

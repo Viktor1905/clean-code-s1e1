@@ -39,6 +39,8 @@ var createNewTaskElement=function(taskString){
     checkBox.type="checkbox";
     editInput.type="text";
     editInput.className="task-input";
+    editInput.value = taskString;
+    editInput.disabled = true;
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="edit-btn";
@@ -68,7 +70,6 @@ var addTask=function(){
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
-
     taskInput.value="";
 
 }
@@ -82,20 +83,28 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
+
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit-btn ");
+    var editBtn=listItem.querySelector(".edit-btn");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
-
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
+        listItem.classList.remove('edit-mode')
+        editInput.disabled = true;
+        editInput.classList.add('unvisible');
+        label.classList.remove('unvisible');
     }else{
         editInput.value=label.innerText;
         editBtn.innerText="Save";
+        listItem.classList.add('edit-mode')
+        editInput.disabled = false;
+        editInput.classList.remove('unvisible');
+        label.classList.add('unvisible');
     }
 
     //toggle .editmode on the parent.
