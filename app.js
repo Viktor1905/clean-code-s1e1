@@ -41,6 +41,7 @@ var createNewTaskElement=function(taskString){
     editInput.className="task-input";
     editInput.value = taskString;
     editInput.disabled = true;
+    editInput.classList.add('unvisible');
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="edit-btn";
